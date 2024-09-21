@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrojaNix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/22a88b6823.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About TrojaNix</a></li>
+                    <li><a href="#services">What I do?</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p2>Professional Malware Enemy</p2>
+                <h1>Hi, We are team <span>TrojaNix</span></h1>
+                <p>TrojaNix shields your system from advanced threats, ensuring robust security.<br>Stay protected with real-time defense and peace of mind.</p>
+                <div class="social-icons">
+                        <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------about------------------->
+
+
+    <div id="about" class="scroll-animation">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Photo1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>TrojaNix</span></h1>
+                    <p>Malwares can wreak havoc on your sensitive data, compromising your personal information and business integrity through various means before you're even aware of their presence. That's why you need a robust system for early detection of malicious files, enabling you to identify threats and thwart attacks before they escalate, ultimately safeguarding your data and maintaining a secure digital environment.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Inspiration Story</p>
+                        <p class="tab-links" onclick="opentab('experience')">Languages</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>On one fine day...</span><br>While we were exploring the inner workings of a malware framework , we stumbled upon various malware analysis tools such VirusTotal where in to test the legitimacy of the online website we tried to upload a C++ program file and it detected a trojan horse, we were stunned to find a malware in a C++ program file and that sparked the curiosity which led us here.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Front End Langaues</span><br>HTML, CSS and JavaScript</li>
+                            <li><span>Back End Languages</span><br>Python</li>
+                            <li><span>API's and Frameworks</span><br>Flask and Keras</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!----------Portfolio----------------------------->
+    <div id="services" class="scroll-animation">
+        <div class="container">
+            <h1 class="sub-title">What I do</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Quick Scan</h2>
+                    <p>We randomly analyse the files that we believe could have some potential risks associated with it.</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-camera-retro"></i>
+                    <h2>Deep Scan</h2>
+                    <p>We iterate through every file present on your device, averting all potential risks.</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Log Monitoring</h2>
+                    <p>We use an AI trained on custom set of data. It fetches the log kernel in real-time and monitors the network acitivity.</p>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+
+    <!-----------------------My Portfolio--------------------------------->
+   <!--
+    <div id="portfolio" class="scroll-animation">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="imgA.png">
+                    <div class="layer">
+                        <h3>A</h3>
+                        <p>An Arduino-powered robot employs ultrasonic sensors to traverse a maze, utilizing these sensors to navigate its path and successfully locate the exit.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="imgB.png">
+                    <div class="layer">
+                        <h3>B</h3>
+                        <p>The line-following robot is a nimble autonomous robot that uses sensors to track and follow lines, showcasing precise navigation and intelligent control.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="imgC.png">
+                    <div class="layer">
+                        <h3>C</h3>
+                        <p>The autonomous car utilizes cameras and OpenCV to perceive its surroundings, enabling real-time image processing for navigation and obstacle avoidance.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>    
+  -->
+    
+
+
+    <!--------------------Download Resume-------------------------------->
+  <!--
+    <div id="resume" class="scroll-animation">
+        <div class="RESUME">
+            <h1 class="sub-title">My Resume</h1>
+            <a href="" download class="btn" >Download</a>
+        </div>
+    </div>
+-->
+    <!---------------------Contact--------------------------------------->
+
+    <div id="contact" class="scroll-animation">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>  
+                    <p> <i class="fa-solid fa-paper-plane"></i>     teamtrojanix@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+            </div>        
+                <div class="contact-right"> 
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="E-Mail" name="E-Mail" placeholder="Your E-Mail" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn2">Submit</button>
+                    </form>
+                </div>
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2024 TrojaNix - All Rights Reserved. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+
+
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll('.scroll-animation');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzAOcBA4M9ZNiW709so-2tWpugf-O2V32TbN6je8VNrsMc7RO4ba7giwuEZe2gVPDr5/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>        
+
+
+</body>
+</html>
