@@ -16,7 +16,6 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About TrojaNix</a></li>
-                    <li><a href="#services">What I do?</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
@@ -28,15 +27,18 @@
                 <p>TrojaNix shields your system from advanced threats, ensuring robust security.<br>Stay protected with real-time defense and peace of mind.</p>
                 <div class="social-icons">
                         <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
+                </div>
+                <div class="RESUME">
+                    <a href="" download class="btn" >Scan Now!</a>
+                </div>
             </div>
         </div>
     </div>
 
+    
+
     <!----------------------------about------------------->
-
-
-    <div id="about" class="scroll-animation">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -52,13 +54,13 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>On one fine day...</span><br>While we were exploring the inner workings of a malware framework , we stumbled upon various malware analysis tools such VirusTotal where in to test the legitimacy of the online website we tried to upload a C++ program file and it detected a trojan horse, we were stunned to find a malware in a C++ program file and that sparked the curiosity which led us here.</li>
+                            <li><span>On one fine day...</span><br>While we were exploring the inner workings of a malware framework, we stumbled upon various malware analysis tools such as VirusTotal. When we uploaded a C++ program file to test the legitimacy of the website, it detected a trojan horse. We were stunned to find malware in a C++ program file, sparking the curiosity that led us here.</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Front End Langaues</span><br>HTML, CSS and JavaScript</li>
+                            <li><span>Front End Langaues</span><br>HTML, CSS, and JavaScript</li>
                             <li><span>Back End Languages</span><br>Python</li>
                             <li><span>API's and Frameworks</span><br>Flask and Keras</li>
                         </ul>
@@ -70,84 +72,6 @@
     </div>
 
 
-
-    <!----------Portfolio----------------------------->
-    <div id="services" class="scroll-animation">
-        <div class="container">
-            <h1 class="sub-title">What I do</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-brands fa-android"></i>
-                    <h2>Quick Scan</h2>
-                    <p>We randomly analyse the files that we believe could have some potential risks associated with it.</p>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-camera-retro"></i>
-                    <h2>Deep Scan</h2>
-                    <p>We iterate through every file present on your device, averting all potential risks.</p>
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Log Monitoring</h2>
-                    <p>We use an AI trained on custom set of data. It fetches the log kernel in real-time and monitors the network acitivity.</p>
-                </div>
-
-            </div>
-        </div>
-    </div> 
-
-
-    <!-----------------------My Portfolio--------------------------------->
-   <!--
-    <div id="portfolio" class="scroll-animation">
-        <div class="container">
-            <h1 class="sub-title">My Portfolio</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="imgA.png">
-                    <div class="layer">
-                        <h3>A</h3>
-                        <p>An Arduino-powered robot employs ultrasonic sensors to traverse a maze, utilizing these sensors to navigate its path and successfully locate the exit.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="imgB.png">
-                    <div class="layer">
-                        <h3>B</h3>
-                        <p>The line-following robot is a nimble autonomous robot that uses sensors to track and follow lines, showcasing precise navigation and intelligent control.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="imgC.png">
-                    <div class="layer">
-                        <h3>C</h3>
-                        <p>The autonomous car utilizes cameras and OpenCV to perceive its surroundings, enabling real-time image processing for navigation and obstacle avoidance.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>    
-  -->
-    
-
-
-    <!--------------------Download Resume-------------------------------->
-  <!--
-    <div id="resume" class="scroll-animation">
-        <div class="RESUME">
-            <h1 class="sub-title">My Resume</h1>
-            <a href="" download class="btn" >Download</a>
-        </div>
-    </div>
--->
     <!---------------------Contact--------------------------------------->
 
     <div id="contact" class="scroll-animation">
@@ -176,23 +100,7 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
     <script>
-
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname){
@@ -205,7 +113,6 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
     </script>
 
     <script>
@@ -216,12 +123,9 @@
         function closemenu(){
             sidemenu.style.right = "-200px";
         }
-
-
-
     </script>
 
-<script>
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
         const sections = document.querySelectorAll('.scroll-animation');
 
@@ -239,20 +143,19 @@
             observer.observe(section);
         });
     });
-</script>
+    </script>
 
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzAOcBA4M9ZNiW709so-2tWpugf-O2V32TbN6je8VNrsMc7RO4ba7giwuEZe2gVPDr5/exec'
-  const form = document.forms['submit-to-google-sheet']
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzAOcBA4M9ZNiW709so-2tWpugf-O2V32TbN6je8VNrsMc7RO4ba7giwuEZe2gVPDr5/exec'
+    const form = document.forms['submit-to-google-sheet']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>        
-
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>        
 
 </body>
 </html>
