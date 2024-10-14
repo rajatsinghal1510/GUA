@@ -1,178 +1,327 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrojaNix</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/22a88b6823.js" crossorigin="anonymous"></script>
-</head>
-<body> 
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
 
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="Logo.png" class="logo" alt="TrojaNix Logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About TrojaNix</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Professional Malware Enemy</p>
-                <h1>Hi, We are team <span>TrojaNix</span></h1>
-                <p>TrojaNix shields your system from advanced threats, ensuring robust security.<br>Stay protected with real-time defense and peace of mind.</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <div class="RESUME">
-                    <!-- Buttons for Scan Now and Choose a File for Scan, aligned side-by-side -->
-                    <a id="scanBtn" href="#" class="btn">Scan Now!</a>
-                    <a href="#" class="btn" onclick="document.getElementById('fileInput').click()">Choose a File for Scan</a>
-                    <input type="file" id="fileInput" style="display: none;" />
-                </div>
-            </div>
-        </div>
-    </div>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!----------------------------about------------------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Photo1.png" alt="TrojaNix Team">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About <span>TrojaNix</span></h1>
-                    <p>Malwares can wreak havoc on your sensitive data, compromising your personal information and business integrity through various means before you're even aware of their presence. That's why you need a robust system for early detection of malicious files, enabling you to identify threats and thwart attacks before they escalate, ultimately safeguarding your data and maintaining a secure digital environment.</p>
+body {
+    background-color: #080808;
+    color: #fff;
+}
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Inspiration Story</p>
-                        <p class="tab-links" onclick="opentab('experience')">Languages</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>On one fine day...</span><br>While we were exploring the inner workings of a malware framework, we stumbled upon various malware analysis tools such as VirusTotal. When we uploaded a C++ program file to test the legitimacy of the website, it detected a trojan horse. We were stunned to find malware in a C++ program file, sparking the curiosity that led us here.</li>
-                        </ul>
-                    </div>
+/* Header Section */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('image1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Front End Languages</span><br>HTML, CSS, and JavaScript</li>
-                            <li><span>Back End Languages</span><br>Python</li>
-                            <li><span>API's and Frameworks</span><br>Flask and Keras</li>
-                        </ul>
-                    </div>
+.container {
+    padding: 10px 10%;
+}
 
-                </div>
-            </div>
-        </div>
-    </div>
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    <!---------------------Contact--------------------------------------->
+.logo {
+    width: 170px;
+    padding-top: 1px;
+}
 
-    <div id="contact" class="scroll-animation">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Us</h1>  
-                    <p> <i class="fa-solid fa-paper-plane"></i>     teamtrojanix@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>        
-                <div class="contact-right"> 
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="E-Mail" placeholder="Your E-Mail" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn2">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright © 2024 TrojaNix - All Rights Reserved. </p>
-        </div>
-    </div>
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+}
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
 
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const sections = document.querySelectorAll('.scroll-animation');
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #de73ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                } else {
-                    entry.target.classList.remove('animate');
-                }
-            });
-        }, { threshold: 0.5 });
+nav ul li a:hover::after {
+    width: 100%;
+}
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    });
-    </script>
+.fas {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
 
-    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzAOcBA4M9ZNiW709so-2tWpugf-O2V32TbN6je8VNrsMc7RO4ba7giwuEZe2gVPDr5/exec'
-    const form = document.forms['submit-to-google-sheet']
+/* Header Text */
+.header-text {
+    margin-top: 18%;
+    text-align: center;
+}
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
-    </script>        
+.header-text h1 {
+    font-size: 50px;
+    margin-top: 5px;
+}
 
-    <script>
-        // Adding functionality to the scan button
-        document.getElementById('scanBtn').addEventListener('click', function() {
-            alert('System Scan Initiated! Scanning for threats...');
-        
-            // Simulated scan process with a delay (3 seconds)
-            setTimeout(function() {
-                alert('Scan Complete! No threats detected.');
-            }, 3000); // 3-second simulated scan
-        });
+.header-text h1 span {
+    color: #de73ff;
+}
 
-        // Adding functionality to file input for scan
-        document.getElementById('fileInput').addEventListener('change', function() {
-            alert('File selected for scanning: ' + this.files[0].name);
-            // Here you can add further actions like file validation, scan initiation, etc.
-        });
-    </script>
+.header-text p {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+    opacity: 0.75;
+}
 
-</body>
-</html>
+.RESUME .btn {
+    display: inline-block;
+    margin: 15px;
+    border: 1px solid #de73ff;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.RESUME .btn:hover {
+    background-color: #de73ff;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #de73ff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-left p i {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #de73ff;
+    transform: translateY(-3px);
+}
+
+.contact-right form input,
+.contact-right form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #de73ff;
+    padding: 14px 60px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+form .btn2:hover {
+    background: #de73ff;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding: 25px;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Scroll Animation */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #de73ff;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #080808;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav ul {
+        background: #de73ff;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 25px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
