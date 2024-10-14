@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Logo.png" class="logo">
+                <img src="Logo.png" class="logo" alt="TrojaNix Logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About TrojaNix</a></li>
@@ -22,27 +22,28 @@
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p2>Professional Malware Enemy</p2>
+                <p>Professional Malware Enemy</p>
                 <h1>Hi, We are team <span>TrojaNix</span></h1>
                 <p>TrojaNix shields your system from advanced threats, ensuring robust security.<br>Stay protected with real-time defense and peace of mind.</p>
                 <div class="social-icons">
-                        <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <div class="RESUME">
-                    <a href="" download class="btn" >Scan Now!</a>
+                    <!-- Buttons for Scan Now and Choose a File for Scan, aligned side-by-side -->
+                    <a id="scanBtn" href="#" class="btn">Scan Now!</a>
+                    <a href="#" class="btn" onclick="document.getElementById('fileInput').click()">Choose a File for Scan</a>
+                    <input type="file" id="fileInput" style="display: none;" />
                 </div>
             </div>
         </div>
     </div>
-
-    
 
     <!----------------------------about------------------->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="Photo1.png">
+                    <img src="Photo1.png" alt="TrojaNix Team">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About <span>TrojaNix</span></h1>
@@ -60,7 +61,7 @@
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Front End Langaues</span><br>HTML, CSS, and JavaScript</li>
+                            <li><span>Front End Languages</span><br>HTML, CSS, and JavaScript</li>
                             <li><span>Back End Languages</span><br>Python</li>
                             <li><span>API's and Frameworks</span><br>Flask and Keras</li>
                         </ul>
@@ -70,7 +71,6 @@
             </div>
         </div>
     </div>
-
 
     <!---------------------Contact--------------------------------------->
 
@@ -83,17 +83,16 @@
                     <div class="social-icons">
                         <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
-
-            </div>        
+                </div>        
                 <div class="contact-right"> 
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="E-Mail" name="E-Mail" placeholder="Your E-Mail" required>
+                        <input type="email" name="E-Mail" placeholder="Your E-Mail" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn2">Submit</button>
                     </form>
                 </div>
-            
+            </div>
         </div>
         <div class="copyright">
             <p>Copyright © 2024 TrojaNix - All Rights Reserved. </p>
@@ -156,6 +155,24 @@
         .catch(error => console.error('Error!', error.message))
     })
     </script>        
+
+    <script>
+        // Adding functionality to the scan button
+        document.getElementById('scanBtn').addEventListener('click', function() {
+            alert('System Scan Initiated! Scanning for threats...');
+        
+            // Simulated scan process with a delay (3 seconds)
+            setTimeout(function() {
+                alert('Scan Complete! No threats detected.');
+            }, 3000); // 3-second simulated scan
+        });
+
+        // Adding functionality to file input for scan
+        document.getElementById('fileInput').addEventListener('change', function() {
+            alert('File selected for scanning: ' + this.files[0].name);
+            // Here you can add further actions like file validation, scan initiation, etc.
+        });
+    </script>
 
 </body>
 </html>
