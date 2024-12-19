@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://kit.fontawesome.com/22a88b6823.js" crossorigin="anonymous"></script>
 </head>
-<body> 
+<body>
 
     <div id="header">
         <div class="container">
@@ -21,18 +21,15 @@
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
-            
+
             <div class="header-text">
                 <p>Graphical User Authentication</p>
                 <h1>Hi, We are team <span>27</span></h1>
                 <p>GUA relies on users interacting with images or graphical elements to prove their identity.<br>It involves methods like recognition, recall, or cued recall of images, patterns, or click points chosen during registration.</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
                 <div class="RESUME">
                     <!-- Buttons for Register Now and Log In -->
-                    <a id="registerBtn" href="#" class="btn">Register Now</a>
-                    <a href="#" class="btn" id="loginBtn">Log In</a>
+                    <a id="registerBtn" href="javascript:void(0);" class="btn" onclick="register()">Register Now</a>
+<!--                    <a href="javascript:void(0);" class="btn" id="loginBtn" onclick="login()">Log In</a>-->
                 </div>
             </div>
         </div>
@@ -47,18 +44,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title"><span>Graphical User Authentication (GUA)</span></h1>
-                    <p>Graphical User Authentication (GUA) is a security method where users identify or authenticate themselves by interacting with images or visual elements, rather than using traditional text-based passwords. The idea is that users are more likely to remember images, patterns, or specific locations within an image than a string of alphanumeric characters. GUA systems can take various forms, such as choosing a sequence of images, drawing a pattern, or clicking on specific points in an image. These systems aim to offer a user-friendly yet secure alternative to traditional passwords, addressing issues like password memorability and resistance to certain types of attacks, such as brute force or dictionary attacks..</p>
-
-                    <!-- <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Inspiration Story</p>
-                        <p class="tab-links" onclick="opentab('experience')">Languages</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>On one fine day...</span><br>While we were exploring the inner workings of a malware framework, we stumbled upon various malware analysis tools such as VirusTotal. When we uploaded a C++ program file to test the legitimacy of the website, it detected a trojan horse. We were stunned to find malware in a C++ program file, sparking the curiosity that led us here.</li>
-                        </ul>
-                    </div> -->
-
+                    <p>Graphical User Authentication (GUA) is a security method where users identify or authenticate themselves by interacting with images or visual elements...</p>
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Front End Languages</span><br>HTML, CSS, and JavaScript</li>
@@ -66,7 +52,6 @@
                             <li><span>API's and Frameworks</span><br>Flask and Keras</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -77,14 +62,11 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Us</h1>  
-                    <p> <i class="fa-solid fa-paper-plane"></i> teamtrojanix@gmail.com</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/teamtrojanix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>        
-                <div class="contact-right"> 
-                    <form name="submit-to-google-sheet">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> team27@gmail.com</p>
+                </div>
+                <div class="contact-right">
+                    <form action="{{ url_for('contact') }}" method="POST">
                         <input type="text" name="Name" placeholder="Your name" required>
                         <input type="email" name="E-Mail" placeholder="Your E-Mail" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -94,21 +76,19 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright © 2024 TrojaNix - All Rights Reserved. </p>
+            <p>Copyright © 2024 TrojaNix - All Rights Reserved.</p>
         </div>
     </div>
-    
-
-        
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
             event.currentTarget.classList.add("active-link");
@@ -117,42 +97,49 @@
 
         var sidemenu = document.getElementById("sidemenu");
         function openmenu() {
-            sidemenu.classList.add("open"); // Show the sidemenu on mobile
+            sidemenu.classList.add("open");
         }
 
         function closemenu() {
-            sidemenu.classList.remove("open"); // Hide the sidemenu on mobile
+            sidemenu.classList.remove("open");
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-    const scrollAnimations = document.querySelectorAll('.scroll-animation');
-
-    function handleScroll() {
-        scrollAnimations.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                el.classList.add('animate');
+            const scrollAnimations = document.querySelectorAll('.scroll-animation');
+            function handleScroll() {
+                scrollAnimations.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        el.classList.add('animate');
+                    }
+                });
             }
-        });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-});
-
-        // Register Now button functionality
-        document.getElementById('registerBtn').addEventListener('click', function() {
-            alert('Redirecting to Registration Page...');
-            // Replace with your registration page URL
-            window.location.href = 'register.html';
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
         });
 
-        // Log In button functionality
-        document.getElementById('loginBtn').addEventListener('click', function() {
-            alert('Redirecting to Login Page...');
-            // Replace with your login page URL
-            window.location.href = 'login.html';
-        });
+        // Open the Register page in a new tab
+        function register() {
+            window.open("http://localhost:8000/login", "_blank");
+        }
+
+        // AJAX function to trigger Python script for Login
+        function login() {
+            fetch('/login')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Login successful');
+                        // You can redirect or change page content here
+                    } else {
+                        alert('Login failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error occurred while logging in');
+                });
+        }
     </script>
 
 </body>
